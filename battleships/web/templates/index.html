@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleships Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚢 Battleships Game</h1>
+            <p>Find all 3 battleships in 5 attempts!</p>
+        </header>
+
+        <div class="game-controls">
+            <button id="startBtn" class="btn btn-primary">Start New Game</button>
+            <button id="debugBtn" class="btn btn-secondary">Start Debug Game</button>
+            <button id="exitBtn" class="btn btn-danger" disabled>Exit Game</button>
+        </div>
+
+        <div class="game-info">
+            <div id="gameStatus" class="status">Click "Start New Game" to begin</div>
+            <div id="gameStats" class="stats"></div>
+        </div>
+
+        <div class="game-board-container">
+            <div id="gameBoard" class="game-board">
+                <div class="board-header">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                    <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                </div>
+                <div class="board-content">
+                    <div class="board-cells" id="boardCells">
+                        <!-- Cells will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="click-instruction" id="clickInstruction">
+                <p>Start a game to begin clicking on cells!</p>
+            </div>
+        </div>
+
+        <div class="message-log">
+            <h3>Game Messages</h3>
+            <div id="messageLog" class="log"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
