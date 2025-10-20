@@ -52,7 +52,7 @@ class EscapeRoom:
             
             if action == "help":
                 self.show_help()
-            elif action == "quit":
+            elif action in ["quit", "exit", "q", "e"]:
                 print("Thanks for playing!")
                 break
             elif action == "inventory":
